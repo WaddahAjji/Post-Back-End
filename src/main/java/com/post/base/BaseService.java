@@ -37,8 +37,8 @@ public class BaseService<T extends  BaseEntity<ID>,ID extends Number> {
     }
 
     public void delete(ID id) {
-        T auther= baseRepository.findById(id).orElseThrow();
-        baseRepository.delete(auther);
+        T entity= baseRepository.findById(id).orElseThrow();
+        baseRepository.delete(entity);
     }
 
 
